@@ -60,7 +60,7 @@ function LoginPage() {
       if (user) {
         setLoading(false);
         toast.success('Login successfully!');
-        navigate.push(user.redirect);
+        navigate.push(`/dashboard?link=${encodeURIComponent(user.embeded)}`);
       } else {
         setLoading(false);
         setError('Invalid email or password.');
